@@ -1,0 +1,155 @@
+<!doctype html>
+<!--
+  Single-page Sports Website
+  - Mobile-first, responsive, semantic HTML
+  - Live animated background via CSS
+  - Smooth scrolling and simple JS for interactions
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Edge Sports — Play. Improve. Enjoy.</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Background video (global): place a file at assets/Sportsbackground.mp4 and optional poster at assets/bg-poster.jpg -->
+  <video id="bgVideo" class="bg-video" autoplay muted loop playsinline poster="assets/bg-poster.jpg" aria-hidden="true">
+    <source src="assets/Sportsbackground.mp4" type="video/mp4">
+  </video>
+
+  <!-- Sticky navigation -->
+  <header class="site-header">
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <a class="logo" href="#home">Edge Sports</a>
+      <ul class="nav-list">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#sports" class="nav-link">Sports</a></li>
+        <li><a href="#profile" class="nav-link">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HOME SECTION -->
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="site-title">Edge Sports</h1>
+        <p class="tagline">Train harder. Play smarter. Enjoy every moment.</p>
+        <button class="cta" id="exploreBtn">Explore Sports</button>
+      </div>
+    </section>
+
+    <!-- SPORTS SECTION -->
+    <section id="sports" class="section">
+      <h2 class="section-title">Sports</h2>
+      <div class="cards sports-grid">
+        <!-- Swimming Card -->
+        <article class="card sport-card">
+          <div class="sport-image">
+            <!-- Add your sport image at assets/swimming.jpg -->
+            <img src="assets/swimming.jpg" alt="Swimming" />
+          </div>
+          <div class="card-media swim-icon" aria-hidden="true">
+            <!-- simple swimmer SVG icon (kept as decorative fallback) -->
+            <svg viewBox="0 0 64 64" width="64" height="64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18" cy="16" r="6" fill="#fff" opacity="0.95" />
+              <path d="M8 36c8-6 16-6 24-2s12 2 18-2" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4 46c8-4 18-6 28-4s18 6 28 4" stroke="#9be7ff" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Swimming</h3>
+          <p class="card-desc">Build endurance and technique in the pool — strokes, drills, and laps.</p>
+        </article>
+
+        <!-- Badminton Card -->
+        <article class="card sport-card">
+          <div class="sport-image">
+            <!-- Add your sport image at assets/badminton.jpg -->
+            <img src="assets/badminton1.jpg" alt="Badminton" />
+          </div>
+          <div class="card-media shuttle-icon" aria-hidden="true">
+            <!-- shuttlecock SVG -->
+            <svg viewBox="0 0 64 64" width="64" height="64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M48 8L32 28l8 14 12-34z" fill="#fff" opacity="0.95"/>
+              <path d="M18 46c6-4 12-6 20-4" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="14" cy="50" r="4" fill="#fff"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Badminton</h3>
+          <p class="card-desc">Fast reflexes and precise placement — singles and doubles strategy.</p>
+        </article>
+
+        <!-- Basketball Card -->
+        <article class="card sport-card">
+          <div class="sport-image">
+            <!-- Add your sport image at assets/basketball.jpg -->
+            <img src="assets/basketball1.jpg" alt="Basketball" />
+          </div>
+          <div class="card-media ball-icon" aria-hidden="true">
+            <!-- basketball SVG -->
+            <svg viewBox="0 0 64 64" width="64" height="64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="14" fill="#fff" opacity="0.98"/>
+              <path d="M18 32h28" stroke="#c04" stroke-width="2" stroke-linecap="round"/>
+              <path d="M32 18v28" stroke="#c04" stroke-width="2" stroke-linecap="round"/>
+              <path d="M22 20c6 6 6 18 0 24" stroke="#c04" stroke-width="2" stroke-linecap="round"/>
+              <path d="M42 20c-6 6-6 18 0 24" stroke="#c04" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Basketball</h3>
+          <p class="card-desc">Skill, teamwork, and quick decision-making on court.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROFILE SECTION -->
+    <section id="profile" class="section">
+      <h2 class="section-title">Profile</h2>
+      <div class="cards profile-grid">
+        <!-- Four sample profiles -->
+        <article class="card profile-card">
+          <div class="profile-image">
+            <!-- Add your profile image at assets/profile1.jpg -->
+            <img src="assets/dafodil.jpg" alt="Daffodil Isturis" />
+          </div>
+          <h3 class="card-title">Daffodil Isturis</h3>
+          <p class="card-sub">Head Coach</p>
+          <p class="card-desc">Leads training sessions and performance planning for athletes.</p>
+        </article>
+
+        <article class="card profile-card">
+          <div class="profile-image">
+            <!-- Add your profile image at assets/profile2.jpg -->
+            <img src="assets/donna.jpg" alt="DG Donz" />
+          </div>
+          <h3 class="card-title">DG Donz</h3>
+          <p class="card-sub">Fitness Trainer</p>
+          <p class="card-desc">Focuses on strength, mobility and recovery protocols.</p>
+        </article>
+
+        <article class="card profile-card">
+          <div class="profile-image">
+            <!-- Add your profile image at assets/profile3.jpg -->
+            <img src="assets/niell.jpg" alt="Niell Brian" />
+          </div>
+          <h3 class="card-title">Niell Brian</h3>
+          <p class="card-sub">Skills Coach</p>
+          <p class="card-desc">Works on drills, technique and tactical sessions.</p>
+        </article>
+
+        <article class="card profile-card">
+          <div class="profile-image">
+            <!-- Add your profile image at assets/profile4.jpg -->
+            <img src="assets/jancen.jpg" alt="Jancen Faith" />
+          </div>
+          <h3 class="card-title">Jancen Faith</h3>
+          <p class="card-sub">Performance Analyst</p>
+          <p class="card-desc">Analyses metrics to optimize training load and match prep.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
